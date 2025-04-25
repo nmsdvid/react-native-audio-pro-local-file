@@ -21,9 +21,9 @@ const ExampleAudioPlayer = () => {
   const sampleItem: Item = {
     id: '001',
     title: 'Sample Track',
-    url: 'https://example.com/audio/sample.mp3', // Replace with a real URL
+    url: 'https://example.com/audio/sample.mp3',
     artist: 'Test Artist',
-    image: 'https://example.com/image.jpg' // Optional artwork
+    image: 'https://example.com/image.jpg'
   };
 
   const trackEvent = (eventName: string, data: any) => {
@@ -60,7 +60,7 @@ const ExampleAudioPlayer = () => {
 
       const track = {
         id: item.id,
-        url: `file://${destinationPath}`, // 👈 important for iOS, but may fail on Android
+        url: destinationPath,
         title: item.title,
         artist: item.artist || 'Unknown Artist',
         artwork: item.image || ''
